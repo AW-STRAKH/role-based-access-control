@@ -53,6 +53,8 @@ router.get(
     return res.json("Hello User");
   }
 );
+router.get('/',
+res.send("gg"));
 
 // Admin Protected Route
 router.get(
