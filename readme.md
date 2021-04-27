@@ -3,7 +3,7 @@
 
 Authentication used: Passport-jwt authentication adn role based control
 
-## Routes:
+## `Routes`:
 
 Registration routes:
 
