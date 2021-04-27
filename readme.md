@@ -60,6 +60,12 @@ Just hit the api endpoint with the required req to get the response.
 
 [Login user](https://user-images.githubusercontent.com/31369423/116231335-55a83a80-a776-11eb-8fcd-4994a266428c.PNG)
 
+[UserResource](https://user-images.githubusercontent.com/31369423/116231990-2b0ab180-a777-11eb-968f-0c208214876f.PNG)
+
+
+[Role Change](https://user-images.githubusercontent.com/31369423/116232645-0a8f2700-a778-11eb-9df0-9378c0f7f756.PNG)
+Here 'abc1' is the super admin that we have already created and we change the user 'awatansh' role from 'user' to 'admin'
+
 
 
 

@@ -113,6 +113,8 @@ const changeRole=async(req,res)=>
   const role=req.body.role;
   //console.log(role);
  let userdet=await validateUsername(req.body.username);
+ if(!userdet)
+ return res.send("No such user")
  let userid=userdet._id;
  console.log(userid);
  await User.findByIdAndUpdate(userid,{"role":role},{new: true, runValidators: true},function (err,result)
@@ -138,12 +140,12 @@ const validateUsername = async username => {
 };
 
 /**
- * @DESC Passport middleware
+ * Passport middleware
  */
 const userAuth = passport.authenticate("jwt", { session: false });
 
 /**
- * @DESC Check Role Middleware
+ *+Check Role Middleware
  */
 const checkRole = roles => (req, res, next) =>
   !roles.includes(req.user.role)
