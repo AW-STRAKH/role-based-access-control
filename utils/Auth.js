@@ -5,7 +5,7 @@ const User = require("../models/User");
 const { SECRET } = require("../config");
 
 /**
- * @DESC To register the user (ADMIN, SUPER_ADMIN, USER)
+ To register the user (ADMIN, SUPER_ADMIN, USER)
  */
 const userRegister = async (userDets, role, res) => {
   try {
@@ -39,7 +39,7 @@ const userRegister = async (userDets, role, res) => {
 
     await newUser.save();
     return res.status(201).json({
-      message: "Hurry! now you are successfully registred. Please nor login.",
+      message: "you are successfully registred. Please login.",
       success: true
     });
   } catch (err) {
@@ -52,7 +52,7 @@ const userRegister = async (userDets, role, res) => {
 };
 
 /**
- * @DESC To Login the user (ADMIN, SUPER_ADMIN, USER)
+  To Login the user (ADMIN, SUPER_ADMIN, USER)
  */
 const userLogin = async (userCreds, role, res) => {
   let { username, password } = userCreds;
@@ -60,14 +60,14 @@ const userLogin = async (userCreds, role, res) => {
   const user = await User.findOne({ username });
   if (!user) {
     return res.status(404).json({
-      message: "Username is not found. Invalid login credentials.",
+      message: " Invalid login credentials.",
       success: false
     });
   }
   // We will check the role
   if (user.role !== role) {
     return res.status(403).json({
-      message: "Please make sure you are logging in from the right portal.",
+      message: "Not your portal.",
       success: false
     });
   }
@@ -128,9 +128,7 @@ else{
 
 };
 
-  // const updateduser={...userdet,role}
-  // await User.findByIdAndUpdate(userdet.id, updateduser, { new: true });
-  // res.json(updateduser)
+  
 
 
 const validateUsername = async username => {
