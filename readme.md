@@ -42,15 +42,26 @@ Profileinfo :
 
 /profile: Route to get the info of logged in user (handeled with JWT authentication)
 
-## Assumption
+## `Assumption`
 
 ROLES:user,admin,superadmin
 
-## How to run:
+## `How to run:`
 
 The app is hosted at Heroku 
 Just hit the api endpoint with the required req to get the response.
-Attaching also some images as per the requirement of the demo .
+
+
+
+## `Demo`:
+
+[Registering user](https://user-images.githubusercontent.com/31369423/116231044-02ce8300-a776-11eb-8239-5b8b169ac6e2.PNG)
+
+
+[Login user](https://user-images.githubusercontent.com/31369423/116231335-55a83a80-a776-11eb-8fcd-4994a266428c.PNG)
+
+
+
 
 
 
