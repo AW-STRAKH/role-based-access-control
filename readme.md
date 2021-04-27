@@ -1,6 +1,9 @@
 # Role based Acces Control 
 ## Hosted at:  ##https://rolebasedaccess-awatansh.herokuapp.com
 
+Entry link: 
+https://rolebasedaccess-awatansh.herokuapp.com/api/users
+
 Authentication used: Passport-jwt authentication adn role based control
 
 ## `Routes`:
