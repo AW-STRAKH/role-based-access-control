@@ -6,7 +6,7 @@ const { connect } = require("mongoose");
 const { success, error } = require("consola");
 
 // Bring in the app constants
-const { DB, PORT } = require("./config");
+const { DB, } = require("./config");
 
 // Initialize the application
 const app = exp();
@@ -36,8 +36,8 @@ const startApp = async () => {
     });
 
     // Start Listenting for the server on PORT
-    app.listen(PORT, () =>
-      success({ message: `Server started on PORT ${PORT}`, badge: true })
+    app.listen(process.env.PORT||5000, () =>
+      success({ message: `Server started on PORT `, badge: true })
     );
   } catch (err) {
     error({
